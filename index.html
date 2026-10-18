@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add('js');</script>
+<title>CLM Solutions | Web Design and Drop Shipping Stores</title>
+<meta name="description" content="CLM Solutions (Cox, Lozano, Manley) designs and builds professional websites and drop shipping stores with a clean, modern, tech-forward finish.">
+<meta name="theme-color" content="#05080f">
+<meta property="og:title" content="CLM Solutions">
+<meta property="og:description" content="Web design and development, and drop shipping stores. Clean, modern, professional.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "CLM Solutions",
+  "description": "Web design and development, and drop shipping stores.",
+  "email": "clmsolutions.co@gmail.com"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Boot sequence -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld-core">
+    <svg class="ld-logo" viewBox="0 0 300 100" aria-hidden="true">
+      <path class="ln" pathLength="1" d="M88 22H52Q22 22 22 52" stroke="currentColor" />
+      <path class="ln ln-blue" pathLength="1" d="M22 52Q22 80 52 80H88" stroke="#2f80ed" />
+      <path class="ln" pathLength="1" d="M120 22V80H170" stroke="currentColor" />
+      <path class="ln" pathLength="1" d="M200 80V22L245 60L290 22V80" stroke="currentColor" />
+    </svg>
+    <div class="ld-bar"><i id="ldBar"></i></div>
+    <div class="ld-meta">
+      <p class="ld-log" id="ldLog" aria-live="polite"></p>
+      <p class="ld-pct" id="ldPct">000%</p>
+    </div>
+  </div>
+</div>
+
+<canvas id="net" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"></div>
+<div class="scan" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Shared wordmark symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="clm" viewBox="0 0 300 100">
+    <path d="M88 22H52Q22 22 22 52" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+    <path d="M22 52Q22 80 52 80H88" fill="none" stroke="#2f80ed" stroke-width="10" stroke-linecap="round"/>
+    <path d="M120 22V80H170" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M200 80V22L245 60L290 22V80" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="CLM Solutions, home">
+      <svg class="wm" viewBox="0 0 300 100" aria-hidden="true"><use href="#clm"/></svg>
+      <span class="brand-sub">Solutions</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a><a href="#designs">Designs</a>
+      <a href="#values">Values</a>
+      <a href="#purpose">Purpose</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="top-actions">
+      <button class="sfx-btn music-btn" id="music" type="button" aria-pressed="false">
+        <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="musicText">Music off</span><span class="np" id="nowPlaying"></span>
+      </button>
+      <button class="sfx-btn" id="sfx" type="button" aria-pressed="false">
+        <span class="sfx-dot" aria-hidden="true"></span><span id="sfxText">Sound off</span>
+      </button>
+      <a class="btn btn-primary btn-sm" href="#contact">Start a project</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#services">Services</a><a href="#designs">Designs</a>
+  <a href="#values">Values</a>
+  <a href="#purpose">Purpose</a>
+  <a href="#process">Process</a>
+  <a href="#contact">Contact</a>
+  <button class="drawer-sfx" id="musicMobile" type="button" aria-pressed="false">Music off</button>
+  <button class="drawer-sfx" id="sfxMobile" type="button" aria-pressed="false">Sound off</button>
+</nav>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="hud" data-reveal><span class="pip" aria-hidden="true"></span>Cox &middot; Lozano &middot; Manley</p>
+        <h1 class="glitch" data-text="Design. Build. Launch.">
+          <span class="line">Design.</span>
+          <span class="line">Build.</span>
+          <span class="line grad">Launch.</span>
+        </h1>
+        <p class="hero-sub" data-reveal style="--d:.15s">CLM Solutions designs and builds professional websites and drop shipping stores. Clean, modern and built to be trusted.</p>
+        <div class="hero-cta" data-reveal style="--d:.25s">
+          <a class="btn btn-primary magnet" href="#contact">Start a project <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn-ghost" href="#services">Explore services</a>
+        </div>
+        <ul class="hero-tags" data-reveal style="--d:.35s">
+          <li>Web design</li><li>Development</li><li>Drop shipping</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" id="heroVisual" aria-hidden="true">
+        <div class="orb">
+          <span class="ring r1"></span>
+          <span class="ring r2"></span>
+          <span class="ring r3"></span>
+          <span class="orbit o1"><i></i></span>
+          <span class="orbit o2"><i></i></span>
+          <span class="orbit o3"><i></i></span>
+          <img class="badge" src="assets/clm-badge.png" alt="" width="720" height="720" decoding="async" fetchpriority="high">
+          <span class="sweep"></span>
+        </div>
+        <div class="hud-card hc1"><span>Status</span><b>Systems online</b></div>
+        <div class="hud-card hc2"><span>Focus</span><b>Web &middot; Drop shipping</b></div>
+      </div>
+    </div>
+    <div class="grid-floor" aria-hidden="true"></div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Web Design</span><span>Development</span><span>Drop Shipping</span><span>Clean</span><span>Modern</span><span>Professional</span><span>Trusted</span><span>Tech-forward</span>
+      <span>Web Design</span><span>Development</span><span>Drop Shipping</span><span>Clean</span><span>Modern</span><span>Professional</span><span>Trusted</span><span>Tech-forward</span>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="sec" id="services">
+    <div class="wrap">
+      <p class="kicker" data-reveal><span class="kn">01</span> What we do</p>
+      <h2 class="sec-title" data-reveal data-scramble>Two things, done properly.</h2>
+      <div class="cards">
+        <article class="card" data-reveal>
+          <div class="card-ico" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="24" rx="2"/><path d="M18 40h12M24 33v7"/><path d="M13 19l5 4-5 4M21 27h6"/></svg>
+          </div>
+          <span class="card-no">01</span>
+          <h3>Web Design &amp; Development</h3>
+          <p>Modern, fast websites designed in-house and built to perform on every screen.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+        <article class="card" data-reveal style="--d:.08s">
+          <div class="card-ico" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M6 16l18-10 18 10v16L24 42 6 32z"/><path d="M6 16l18 10 18-10M24 26v16"/></svg>
+          </div>
+          <span class="card-no">02</span>
+          <h3>Drop Shipping</h3>
+          <p>Online stores set up to sell without holding stock: product listings, checkout and order flow, ready to launch and grow.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our designs -->
+  <section class="sec sec-tight" id="designs">
+    <div class="wrap">
+      <p class="kicker" data-reveal><span class="kn">02</span> What we can do</p>
+      <h2 class="sec-title" data-reveal data-scramble>Our designs</h2>
+      <div class="designs">
+        <article class="card tile" data-reveal>
+          <span class="card-no">A</span>
+          <h3>Custom websites</h3>
+          <p>Designed from scratch around your brand, not built from a template.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+        <article class="card tile" data-reveal style="--d:.06s">
+          <span class="card-no">B</span>
+          <h3>Landing pages</h3>
+          <p>Focused pages that make the next step obvious and turn visitors into inquiries.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+        <article class="card tile" data-reveal style="--d:.12s">
+          <span class="card-no">C</span>
+          <h3>Online stores</h3>
+          <p>Product pages, cart and checkout for drop shipping stores, set up to sell from day one.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+        <article class="card tile" data-reveal style="--d:.06s">
+          <span class="card-no">D</span>
+          <h3>Site redesigns</h3>
+          <p>Modernize an outdated site without losing the parts that already work.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+        <article class="card tile" data-reveal style="--d:.12s">
+          <span class="card-no">E</span>
+          <h3>Motion and interaction</h3>
+          <p>Smooth animation and transitions that guide the eye without slowing the page down.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+        <article class="card tile" data-reveal style="--d:.18s">
+          <span class="card-no">F</span>
+          <h3>Speed and structure</h3>
+          <p>Fast loading, clean code and mobile-first layouts that search engines can read.</p>
+          <span class="card-line" aria-hidden="true"></span>
+        </article>
+      </div>
+      <div class="upgrade" data-reveal style="--d:.1s">
+        <div>
+          <h3>Already have a website?</h3>
+          <p>We can upgrade it to this style: the same clean structure, faster loading and smoother motion, with your content and brand kept intact.</p>
+        </div>
+        <a class="btn btn-primary magnet" href="#contact">Ask about an upgrade <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="sec sec-tight" id="values">
+    <div class="wrap">
+      <p class="kicker" data-reveal><span class="kn">03</span> Our standard</p>
+      <h2 class="sec-title" data-reveal data-scramble>Clean. Modern. Professional. Trusted. Tech-forward.</h2>
+      <ul class="values">
+        <li class="value" data-reveal><span class="v-idx">A</span><h3>Clean</h3><p>Nothing extra. Every element earns its place on the page.</p></li>
+        <li class="value" data-reveal style="--d:.06s"><span class="v-idx">B</span><h3>Modern</h3><p>Current tools, current patterns and a design language that feels now.</p></li>
+        <li class="value" data-reveal style="--d:.12s"><span class="v-idx">C</span><h3>Professional</h3><p>Clear communication, honest timelines and work delivered on schedule.</p></li>
+        <li class="value" data-reveal style="--d:.18s"><span class="v-idx">D</span><h3>Trusted</h3><p>Straight answers and work you can stand behind long after launch.</p></li>
+        <li class="value" data-reveal style="--d:.24s"><span class="v-idx">E</span><h3>Tech-forward</h3><p>Built on modern stacks and ready to grow with the business.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Purpose -->
+  <section class="sec sec-tight" id="purpose">
+    <div class="wrap purpose">
+      <div>
+        <p class="kicker" data-reveal><span class="kn">04</span> Our purpose</p>
+        <h2 class="sec-title" data-reveal data-scramble>Why we do this.</h2>
+      </div>
+      <div class="purpose-body">
+        <p class="purpose-lead" data-reveal>Good design should not be reserved for businesses with the biggest budgets. We do this because a sharp website and a clear brand help a small team look as capable as it really is.</p>
+        <ul class="pillars">
+          <li data-reveal><h3>Make it accessible</h3><p>Quality design and development for businesses of every size.</p></li>
+          <li data-reveal style="--d:.08s"><h3>Make it last</h3><p>Work built on clean code and solid systems, so it keeps working long after launch.</p></li>
+          <li data-reveal style="--d:.16s"><h3>Make it honest</h3><p>Plain language, clear scope and no surprises between the first call and the launch.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="sec sec-tight" id="process">
+    <div class="wrap">
+      <p class="kicker" data-reveal><span class="kn">05</span> How we work</p>
+      <h2 class="sec-title" data-reveal data-scramble>From first call to live launch.</h2>
+      <ol class="steps" id="steps">
+        <li class="step" data-reveal><span class="step-no">01</span><h3>Discover</h3><p>We learn the business, the audience and what success looks like before anything gets drawn.</p></li>
+        <li class="step" data-reveal style="--d:.08s"><span class="step-no">02</span><h3>Design</h3><p>Concepts, a clear visual direction and layouts that hold together on every screen.</p></li>
+        <li class="step" data-reveal style="--d:.16s"><span class="step-no">03</span><h3>Build</h3><p>Clean, fast code or finished assets, reviewed and tested on real devices before we show you.</p></li>
+        <li class="step" data-reveal style="--d:.24s"><span class="step-no">04</span><h3>Launch</h3><p>We ship it, hand over the files and stay available for what comes next.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="sec" id="contact">
+    <div class="wrap contact">
+      <div class="contact-copy">
+        <p class="kicker" data-reveal><span class="kn">06</span> Start a project</p>
+        <h2 class="sec-title" data-reveal data-scramble>Let&rsquo;s build something sharp.</h2>
+        <p class="lede" data-reveal>Tell us what you are working on. We reply within one business day.</p>
+        <ul class="contact-info" data-reveal>
+          <li><span>Email</span><a href="mailto:clmsolutions.co@gmail.com">clmsolutions.co@gmail.com</a></li>
+        </ul>
+      </div>
+      <form class="form" id="form" data-reveal style="--d:.1s" novalidate>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-type">Project type</label>
+          <select id="f-type" name="type">
+            <option>Web design &amp; development</option>
+            <option>Drop shipping</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Message</label>
+          <textarea id="f-msg" name="message" rows="4" required></textarea>
+        </div>
+        <p class="form-err" id="formErr" role="alert" hidden>Please fill in your name, a valid email and a message.</p>
+        <button class="btn btn-primary btn-block magnet" type="submit">Send inquiry <span class="arrow" aria-hidden="true">&rarr;</span></button>
+        <p class="form-note">Opens your email app with your message ready to send.</p>
+        <p class="form-ok" id="formOk" role="status" hidden>Your email app should open now. If it doesn&rsquo;t, write to clmsolutions.co@gmail.com directly.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div class="foot-brand">
+      <svg class="wm wm-foot" viewBox="0 0 300 100" aria-hidden="true"><use href="#clm"/></svg>
+      <p>Cox &middot; Lozano &middot; Manley</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="#services">Services</a><a href="#designs">Designs</a><a href="#purpose">Purpose</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </nav>
+    <p class="legal"><span>&copy; <span id="year"></span> CLM Solutions. All rights reserved.</span> <a href="#top">Back to top &uarr;</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
